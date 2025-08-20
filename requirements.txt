@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+huggingface_hub
+python-dotenv
+pydantic
+google-api-python-client
+google-auth
+google-auth-oauthlib
+python-dateutil
+openai
+sqlmodel
+sqlalchemy

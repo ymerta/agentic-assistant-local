@@ -1,0 +1,136 @@
+/* ---- Layout / theme ---- */
+:root{
+  --bg:#0b0f19;           /* sayfa arkası */
+  --card:#111827;         /* kart arkası */
+  --muted:#9ca3af;        /* ikincil metin */
+  --text:#e5e7eb;         /* ana metin */
+  --accent:#6366f1;       /* buton rengi */
+  --border:#1f2937;       /* kart kenarı */
+  --code:#0b1220;         /* code block arkası */
+}
+
+*{ box-sizing:border-box }
+html, body, #root { height:100% }
+body{
+  margin:0;
+  background: radial-gradient(1200px 600px at -10% -10%, #1b1f33 0, transparent 60%),
+              radial-gradient(1200px 600px at 110% 110%, #1b1f33 0, transparent 60%),
+              var(--bg);
+  color:var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+/* ---- Container ---- */
+.shell{
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+h1{ font-size:28px; margin:0 0 16px }
+
+/* ---- Card ---- */
+.card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+/* ---- Inputs / buttons ---- */
+.row{ display:flex; gap:12px; align-items:center }
+.input{
+  flex:1;
+  padding:10px 12px;
+  background:#0f1629;
+  color:var(--text);
+  border:1px solid var(--border);
+  border-radius:12px;
+  outline:none;
+}
+.btn{
+  border:0;
+  padding:10px 14px;
+  border-radius:12px;
+  cursor:pointer;
+  color:white;
+  background: var(--accent);
+}
+.btn.ghost{
+  background: transparent;
+  border:1px solid var(--border);
+  color: var(--text);
+}
+.btn:disabled{ opacity:.6; cursor:not-allowed }
+
+/* ---- Sections ---- */
+.section{ margin-top:16px }
+.section h3{ margin:0 0 8px; font-size:14px; color:var(--muted) }
+
+/* ---- Code / pre blocks ---- */
+pre{
+  margin:0;
+  padding:12px;
+  background: var(--code);
+  color:#e6f0ff;
+  border-radius:12px;
+  border:1px solid #0f1a2d;
+  white-space:pre-wrap;
+  word-break:break-word;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+}
+
+/* Helpers */
+.mt{ margin-top:12px }
+.small{ color:var(--muted); font-size:12px }
+
+/* EKRAN ORTALAMA WRAPPER */
+.page{
+  min-height: 100vh;              /* tam ekran yükseklik */
+  display: flex;
+  justify-content: center;        /* yatay ortala */
+  align-items: flex-start;        /* istersen center yapıp dikey de ortalarsın */
+  padding: 32px 16px;             /* kenarlara nefes */
+}
+
+/* İç kutu – genişlik sınırı + tam ortalı */
+.shell{
+  width: min(100%, 1040px);       /* 1040px’i geçme, mobilde %100 */
+  margin: 0 auto;                 /* ortalama garanti */
+}
+/* görsel bloklar */
+.surface{
+  background:#0e1526;
+  border:1px solid #16243c;
+  border-radius:12px;
+  padding:12px;
+}
+
+.final{ white-space:pre-wrap; line-height:1.5 }
+
+.list{ list-style:none; padding:0; margin:0; display:grid; gap:10px }
+.item{
+  background:#0b1322;
+  border:1px solid #13233d;
+  border-radius:10px;
+  padding:10px;
+}
+.item-title{ font-weight:600 }
+.item-sub{ color:var(--muted); font-size:12px; margin-top:2px }
+.item-snippet{ margin-top:6px; color:#cdd8ff; font-size:13px }
+
+.grid{ display:grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap:10px }
+.chip{
+  background:#0b1322;
+  border:1px solid #13233d;
+  border-radius:10px;
+  padding:10px;
+  display:flex; gap:6px; flex-wrap:wrap;
+}
+
+.event-card{ background:#0b1322; border:1px solid #13233d; border-radius:10px; padding:12px }
+.link{ color:#8ea8ff; text-decoration:underline; }
+
+.toggle{ display:flex; align-items:center; gap:8px; color:var(--muted); font-size:13px }
