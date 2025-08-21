@@ -3,6 +3,7 @@
 An AI-powered personal assistant with a **React frontend** and a **FastAPI backend**, designed to help users manage emails, calendars, and tasks through natural language instructions.  
 It integrates with Gmail and Google Calendar, supports summarization, and maintains conversation history in a local SQLite database.
 
+You can look my blog for this project: https://medium.com/@ymertakan/building-my-own-ai-personal-assistant-with-react-fastapi-sqlite-1e2f687a068d 
 ---
 
 ## Features
